@@ -14,7 +14,7 @@ export const register = async (req, res) => {
     const existing = await User.findOne({ email })
     if (existing) return res.status(400).json({ message: 'Email already registered' })
 
-    const user = new User({ username, email, password })
+    const user = new User({ email, password })
     await user.save()
 
     const token = createToken(user._id, '1d')
@@ -27,7 +27,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   const { email, password } = req.body
-
+  console.log("recieved login request")
   try {
     const user = await User.findOne({ email })
     if (!user) return res.status(400).json({ message: 'Invalid email or password' })
@@ -59,25 +59,25 @@ export const forgotPassword = async (req, res) => {
 
     const resendHTML = `
       <!DOCTYPE html>
-    <html>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Password Reset</title>
-    </head>
-    <body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
-      <div style="max-width: 500px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
-        <h2 style="color: #333333;">Reset Your Password</h2>
-        <p style="color: #555555;">
-          You requested a password reset. Click the button below to set a new password:
-        </p>
-        <a href="${resetLink}" 
-           style="display: inline-block; padding: 12px 20px; margin: 20px 0; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">
-          Reset Password
-        </a>
-      </div>
-    </body>
-    </html>
+      <html>
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Reset</title>
+      </head>
+      <body style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px;">
+        <div style="max-width: 500px; margin: auto; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+          <h2 style="color: #333333;">Reset Your Password</h2>
+          <p style="color: #555555;">
+            You requested a password reset. Click the button below to set a new password:
+          </p>
+          <a href="${resetLink}" 
+            style="display: inline-block; padding: 12px 20px; margin: 20px 0; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">
+            Reset Password
+          </a>
+        </div>
+      </body>
+      </html>
     `
 
     await sendEmail({
