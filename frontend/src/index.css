@@ -18,6 +18,13 @@ header{
   text-align: center;
   border-bottom: #ef7f0040 solid 2px;
   border-bottom: rgb(0, 140, 255, 0.75) solid 2px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0;
+  z-index: 1000;
+  text-align: center;
 }
 header > h1{
   text-transform: uppercase;

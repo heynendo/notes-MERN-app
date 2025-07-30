@@ -1,9 +1,11 @@
 .sign-in{
+    margin: auto;
     margin-top: 15vh;
     width: 90vw;
     justify-self: center;
 }
 .sign-in > .form-header{
+    margin: auto;
     display: flex;
     justify-content: space-between;
     width: 80vw;
@@ -71,6 +73,7 @@
     display: block;
     justify-self: center;
     width: 50%;
+    margin: auto;
     margin-top: 50px;
     margin-bottom: 25px;
     height: 40px;
@@ -93,6 +96,7 @@
     color: #FFFFFF;
 }
 .sign-in > p{
+    text-align: center;
     justify-self: center;
     color: #FFFFFF;
 }
@@ -113,7 +117,7 @@
 }
 
 .sign-in .forgot-password-link{
-    position: fixed;
-    bottom: 50px;
-    color: #FFFFFFBF;
+    text-align: center;
+    padding-top: 100px;
+    color: #FFFFFF;
 }
