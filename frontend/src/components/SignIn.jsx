@@ -1,8 +1,10 @@
 import { useState } from "react"
 import { Link, useNavigate } from 'react-router-dom'
+import Loading from './Loading'
 import '../styles/sign-in.css'
 
 function SignIn({type}){
+    const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
     const navigate = useNavigate()
 
@@ -25,6 +27,7 @@ function SignIn({type}){
 
     // either login or create user based on type prop
     const sendData = async (e) => {
+        setLoading(true)
         setError("")
         e.preventDefault()
 
@@ -42,6 +45,7 @@ function SignIn({type}){
             const data = await response.json()
 
             if (!response.ok) {
+                setLoading(false)
                 if (response.status === 400 && !loginTrue){ // email already exists
                     setError(`Email (${userData.email}) already exists.`)
                 } else if (response.status === 400 && loginTrue){ // invalid email or password
@@ -63,9 +67,12 @@ function SignIn({type}){
             navigate('/dashboard')
 
         }catch(e){
+            setLoading(false)
+            setError(`Error: ${e.message}`)
             console.error("Authentication error: ", e.message)
         }
     }
+    if (loading) return <Loading />
 
     return (
         <div className="sign-in">
@@ -103,8 +110,8 @@ function SignIn({type}){
                 <button className="submit" type="submit">{type}</button>
             </form>
             {loginTrue ?
-                <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p> :
-                <p>Already have an account? <Link to='/login'>Login</Link></p> 
+                <p>Don't have an account? <Link to='/signup'> Sign Up</Link></p> :
+                <p>Already have an account? <Link to='/login'> Login</Link></p> 
             }
             {loginTrue && <p className="forgot-password-link">Forgot your password? <Link to="/forgotpassword">Click here</Link></p>}
         </div>
