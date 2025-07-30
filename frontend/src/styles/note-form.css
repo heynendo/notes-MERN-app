@@ -1,0 +1,92 @@
+.note-form{
+    margin-top: 15vh;
+    justify-content: center;
+    justify-self: center;
+}
+.note-form > .note-form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+.note-form .note-form-header > h2{
+    margin: 0;
+}
+.note-form form > input, .note-form form > textarea{
+    font-family: 'Playfair Display';
+    justify-self: center;
+    display: block;
+    width: 90vw;
+    max-width: 1000px;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    height: 40px;
+    text-align: start;
+    text-indent: 25px;
+    align-items: center;
+    border: #FFFFFF solid 1px;
+    border-radius: 10px;
+    background-color: #ffffff01;
+    color: #FFFFFFBF;
+    font-size: 1em;
+    transition: background-color 0.2s;
+    resize: none;
+}
+.note-form form > textarea{
+    height: 35vh;
+    padding-top: 5px;
+}
+.note-form form > input:hover, .note-form form > textarea:hover{
+    background-color: #ffffff0d;
+}
+.note-form form > input:focus, .note-form form > textarea:focus{
+    background-color: #ffffff0d;
+    border: #FFFFFF solid 1px;
+}
+.note-form form > input::placeholder, .note-form form > textarea::placeholder{
+    color: #FFFFFF80;
+}
+.note-form form > .submit{
+    display: block;
+    justify-self: center;
+    width: 50%;
+    margin: 50px 0;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border: rgb(0, 140, 255, 0.75) solid 1px;
+    border-radius: 10px;
+    background-color: rgb(0, 140, 255, 0.05);
+    color: #FFFFFFBF;
+    cursor: pointer;
+    font-family: 'Playfair Display';
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+.note-form form > .submit:hover{
+    background-color: rgb(0, 140, 255, 0.1);
+    color: #FFFFFF;
+}
+.trashcan{
+    height: 45px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.placeholder{
+    width: 50px;
+}
+.error-note-form{
+    text-align: center;
+    margin-top: 20vh;
+    color: #FFFFFFBF;
+}
+.error-note-form p > a{
+    color: rgb(0, 140, 255, 0.75);
+    text-decoration: none;
+    transition: 0.2s;
+}
+.error-note-form p > a:hover{
+    color: white;
+    text-decoration: underline;
+}

@@ -1,0 +1,119 @@
+.sign-in{
+    margin-top: 15vh;
+    width: 90vw;
+    justify-self: center;
+}
+.sign-in > .form-header{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 500px;
+    height: 75px;
+    justify-self: center;
+}
+.sign-in .form-header > a{
+    align-self: center;
+    width: 50px;
+}
+.sign-in .form-header > div{
+    width: 50px;
+}
+.sign-in > form {
+    display: block;
+    justify-self: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 600px;
+}
+.sign-in form > input{
+    font-family: 'Playfair Display';
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    height: 40px;
+    text-align: start;
+    text-indent: 25px;
+    align-items: center;
+    border: #FFFFFF solid 1px;
+    border-radius: 10px;
+    background-color: #ffffff01;
+    color: #FFFFFFBF;
+    font-size: 1em;
+    transition: 0.2s;
+}
+.sign-in form > input:hover{
+    background-color: #ffffff0d;
+}
+.sign-in form > input:focus{
+    background-color: #ffffff0d;
+    border: #FFFFFF solid 1px;
+}
+.sign-in form > input::placeholder{
+    color: #FFFFFF80;
+}
+.sign-in form > .toggle-password{
+    font-family: 'Playfair Display';
+    font-size: 0.9em;
+    border: none;
+    background: none;
+    color: #ef7f00bf;
+    color: rgb(0, 140, 255, 0.75);
+    cursor: pointer;
+    margin-left: 25px;
+    transition: 0.2s;
+}
+.sign-in form > .toggle-password:hover{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.sign-in form > .submit{
+    display: block;
+    justify-self: center;
+    width: 50%;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border: #EF7F00 solid 1px;
+    border: rgb(0, 140, 255, 0.75) solid 1px;
+    border-radius: 10px;
+    background: #EF7F000d;
+    background: rgb(0, 140, 255, 0.05);
+    color: #FFFFFFBF;
+    cursor: pointer;
+    font-family: 'Playfair Display';
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+.sign-in form > .submit:hover{
+    background: #ef7f001a;
+    background: rgb(0, 140, 255, 0.1);
+    color: #FFFFFF;
+}
+.sign-in > p{
+    justify-self: center;
+    color: #FFFFFF;
+}
+.sign-in p > a{
+    color: rgb(0, 140, 255, 0.75);
+    text-decoration: none;
+    transition: 0.2s;
+}
+.sign-in p > a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.sign-in .error-message{
+    color: rgb(194, 0, 0);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.sign-in .forgot-password-link{
+    position: fixed;
+    bottom: 50px;
+    color: #FFFFFFBF;
+}

@@ -1,0 +1,123 @@
+.dashboard{
+    justify-self: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 800px;
+    margin-top: 50px;
+}
+.dashboard-note{
+    color: white;
+    text-decoration: none;
+    border: #FFFFFF solid 1px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255, 0.05);
+    background: rgb(0, 140, 255, 0.05);
+    margin: 25px 0;
+}
+.dashboard-note > .note-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 50px;
+}
+.dashboard-note .note-header > h3{
+    font-size: 2em;
+    color: white;
+    padding-left: 25px;
+    cursor: default;
+}
+.dashboard-note > .note-header > button{
+    font-family: 'Playfair Display';
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+.dashboard-note > .break{
+    width: 100%;
+    height: 1px;
+    background: white;
+}
+.dashboard-note > p{
+    padding: 0 25px;
+    margin-top: 10px;
+    min-height: 50px;
+}
+.sign-out-button{
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    justify-self: start;
+    width: 20%;
+    min-width: 100px;
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border: #FFFFFFBF solid 1px;
+    border-radius: 10px;
+    background: none;
+    color: #FFFFFFBF;
+    cursor: pointer;
+    font-family: 'Playfair Display';
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+.sign-out-button:hover{
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+.create-note{
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    justify-self: end;
+    width: 20%;
+    min-width: 100px;
+    max-width: 200px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    border: rgb(0, 140, 255, 0.75) solid 1px;
+    border-radius: 10px;
+    background: none;
+    color: #FFFFFFBF;
+    cursor: pointer;
+    font-family: 'Playfair Display';
+    font-size: 1.25em;
+    transition: 0.2s;
+}
+.create-note:hover{
+    background: rgb(0, 140, 255, 0.1);
+    color: #FFFFFF;
+}
+.edit-icon{
+    display: block;
+    align-self: center;
+    justify-self: center;
+    height: 45px;
+    aspect-ratio: 1;
+    transition: 0.2s;
+    margin-right: 10px;
+}
+.edit-icon:hover{
+    height: 50px;
+}
+.error-dashboard{
+    text-align: center;
+    margin-top: 20vh;
+    color: #FFFFFFBF;
+}
+.error-dashboard p > a{
+    text-decoration: none;
+    color: rgb(0, 140, 255, 0.75);
+    transition: 0.2s;
+}
+.error-dashboard p > a:hover{
+    color: white;
+    text-decoration: underline;
+}

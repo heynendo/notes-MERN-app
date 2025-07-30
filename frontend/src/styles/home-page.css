@@ -1,0 +1,47 @@
+.home{
+    color: white;
+    width: 90vw;
+    max-width: 1000px;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 15vh;
+    text-align: center;
+}
+
+.home > p{
+    margin: 25px;
+    opacity: 0.75;
+}
+.home > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+.home div > a{
+    display: block;
+    font-family: 'Playfair Display';
+    font-size: 1.25em;
+    width: 25vw;
+    min-width: 200px;
+    max-width: 400px;
+    height: 40px;
+    margin: 10px 25px;
+    background: #ef7f000d;
+    background: rgb(0, 140, 255, 0.05);
+    border: 1px solid #EF7F00;
+    border: 1px solid rgb(0, 140, 255, 0.75);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+    color: #FFFFFFBF;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.home div > a:hover{
+    background: #ef7f001a;
+    background: rgb(0, 140, 255, 0.10);
+    color: #FFFFFF;
+}
