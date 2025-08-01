@@ -1,5 +1,5 @@
 # MERN Notes App 
-Created by [Donovan Heynen 🔗](https://donovanheynen.com/)
+Created by [Donovan Heynen](https://donovanheynen.com/)
 
 A full-stack notes management application built with the **MERN stack** that lets users securely create, organize, and manage notes — accessible on any device.
 
