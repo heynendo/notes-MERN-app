@@ -27,7 +27,6 @@ export const createNote = async (req, res) =>{
         const newNote = new Note({title, content, user: req.user.id})
         const savedNote = await newNote.save()
         res.status(201).json(savedNote)
-        console.log(title, content)
         console.log(`Creating new note`)
     }catch(e){
         console.error(`Error creating new note: `,e)
